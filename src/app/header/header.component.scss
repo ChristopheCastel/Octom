@@ -1,0 +1,120 @@
+header {
+
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    background: #212229;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    //top: 0;
+    
+    #site-search {
+        
+        width: 300px;
+        height: 40px;
+        margin-top: 6.79px;
+        background: #050505;
+        border: 1px solid #000000;
+        border-radius: 7px;
+        
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #9BABC5;
+        padding: 20px;
+
+        }
+
+    
+
+    
+    
+    
+
+    .logo {
+        width: 64px;
+        height: 64px;
+        // padding: 1em;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 10px;
+    }
+
+
+    .connect-container {
+
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        width: 100px;
+        gap: 15px;
+        margin-right: 15px;
+
+        .bell-container {
+
+            position: relative;
+            display: flex;
+
+            #bell {
+            width: 20px;
+            }
+            .count{ 
+                width: 11px;
+                height: 11px;
+                position: absolute;
+                bottom: 40%;
+                right: -40%;
+                transform: translate(-50%, -50%);
+                color: white;
+                background-color: #5150F9;
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 8px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        
+
+            .avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 30px;
+                }
+            }
+
+            #chevron {
+                width: 14px;
+                height: 7px;
+            }
+        }            
+    }
+   
+
+    
+
+   
+
+
+    
+  
+    
+    
+
+    
+    
+    
