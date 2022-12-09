@@ -30,29 +30,25 @@
 */
 .sidebar {
     
-    position: fixed;
+    // position: fixed;
+
     // align-items: center;
     // width: max-content;
     // height: 100%;
-    top: 0;
-    bottom: 0;
+    // top: 0;
+    // bottom: 0;
     width: 94px;
+    height: 100%;
     // left: 0;
     //background-color: #1E1F25;
     background-color: #cdeb48;
     //border-color: 5px solid green;
 
     .menu {
-        // display: flex;
-        // align-items: stretch;
-        // position: absolute;
-        // top: 50%;
-        // left: 0;
-        // transform: translate(-50%, -50%);
-        //border-color: 2px solid red;
-        //background-color: #2945e2;
+        display: flex;
         padding-top: 100px;
         height: 100%;
+        justify-content: center;
 
         ul li {
             list-style: none;
@@ -60,7 +56,7 @@
             margin: 1em auto;
             width: 40px;
             height: 40px;
-            transform: translate(-50%, -50%);
+            // transform: translate(-50%, -50%);
             display: flex;
             justify-content: center;
             align-items: center;

@@ -12,4 +12,10 @@ export class InputComponent {
   @Input() name:string = "";
   @Input() placeholder:string = "";
 
+
+
+
+  // ngOninit(): void {
+  //   this.isPassword = this.type =="password";
+  // }
 }

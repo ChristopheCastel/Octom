@@ -1,0 +1,34 @@
+a {
+    text-decoration: none;
+}
+
+.title_nice{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.textEnd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 10px;
+
+
+    .textLeft{
+        color: #1A1A1A;
+
+    }
+    .signInNow {
+        color: #007AFF;
+    }
+    .signInNow:hover{
+        color: blue;
+    }
+}
