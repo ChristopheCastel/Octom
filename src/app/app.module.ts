@@ -13,6 +13,11 @@ import { EbooksComponent } from './_pages/ebooks/ebooks.component';
 import { SettingsComponent } from './_pages/settings/settings.component';
 import { LoginComponent } from './login/login.component';
 import { InputComponent } from './login/input/input.component';
+import { ButtonBlueComponent } from './login/button-blue/button-blue.component';
+import { LoginFormComponent } from './login/login-form/login-form.component';
+import { RegisterFormComponent } from './login/register-form/register-form.component';
+import { ForgotPasswordFormComponent } from './login/forgot-password-form/forgot-password-form.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -26,11 +31,16 @@ import { InputComponent } from './login/input/input.component';
     EbooksComponent,
     SettingsComponent,
     LoginComponent,
-    InputComponent
+    InputComponent,
+    ButtonBlueComponent,
+    LoginFormComponent,
+    RegisterFormComponent,
+    ForgotPasswordFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

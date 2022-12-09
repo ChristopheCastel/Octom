@@ -1,0 +1,35 @@
+<p class="title_nice">Nice to see you again</p>
+            
+            <form action="post" class="formFrame">
+
+                <app-input label="Email or phone number" type="email" id="email" name="email" placeholder="Email or phone number">
+                </app-input>
+                
+                <app-input label="Password" type="password" id="password" name="password" placeholder="Enter password">
+                </app-input>
+
+                <div class="endForm">
+                    <div class="checkbox">
+                        <input type="checkbox" id="toggle" name="rememberMe">
+                        <label for="name" class="label-remember">Remember me</label>
+                    </div> 
+
+                    <a routerLink="/forgot-password" class="forgotPassword">
+                    Forgot password ?
+                    </a>
+                </div>
+
+                <app-button-blue nameBtn="Sign in"></app-button-blue>  
+            </form>
+            
+            <div id="ligneGrey"></div>
+
+            <button type="submit" class="btnGoogle">
+                <img src="/assets/images/connexion/google-icon-logo.png" alt="logo google" width="15px" height="15px">
+                Or sign with Google
+            </button>  
+            
+            <div class="textEnd">
+                <p class="textLeft">Don't have an account ?</p>
+                <a routerLink="/register" class="signUpNow">Sign up now</a>
+            </div>

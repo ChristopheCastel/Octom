@@ -1,11 +1,27 @@
-html, body {
-    background-color: #131517;
-    color: #FFF;
+// body {
+//     background-color: #131517;
+//     color: #FFF;
+//     margin: 0;
+//     padding: 0;
+// }
+
+// /* TODO: Refacto */
+// .container {
+//     margin-left: 7em;
+// }
+
+* {
     margin: 0;
     padding: 0;
-}
+    box-sizing: border-box;
+  }
+  
 
-/* TODO: Refacto */
-.container {
-    margin-left: 7em;
-}
+//   body {
+//     background-color: #131517;
+//   }
+
+  body {
+    height: 100vh;
+    
+  }
