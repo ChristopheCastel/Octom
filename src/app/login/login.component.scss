@@ -17,6 +17,7 @@
         flex-basis: 450px;
         padding: 48px;
         background-color: white;
+        // background-color: #131517;
 
         .blocUpLeft {
             display: flex;
@@ -39,6 +40,11 @@
 
     .blocUpLeft {
         justify-content: center;
+
+        img {
+            width:48px;
+            height:48px;
+        }
     }
 
     .form-label{

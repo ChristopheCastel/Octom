@@ -12,8 +12,8 @@ import { MessengerComponent } from './_pages/messenger/messenger.component';
 import { EbooksComponent } from './_pages/ebooks/ebooks.component';
 import { SettingsComponent } from './_pages/settings/settings.component';
 import { LoginComponent } from './login/login.component';
-import { InputComponent } from './login/input/input.component';
-import { ButtonBlueComponent } from './login/button-blue/button-blue.component';
+import { InputComponent } from './_components/input/input.component';
+import { ButtonComponent } from './_components/button/button.component';
 import { LoginFormComponent } from './login/login-form/login-form.component';
 import { RegisterFormComponent } from './login/register-form/register-form.component';
 import { ForgotPasswordFormComponent } from './login/forgot-password-form/forgot-password-form.component';
@@ -32,7 +32,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SettingsComponent,
     LoginComponent,
     InputComponent,
-    ButtonBlueComponent,
+    ButtonComponent,
     LoginFormComponent,
     RegisterFormComponent,
     ForgotPasswordFormComponent
