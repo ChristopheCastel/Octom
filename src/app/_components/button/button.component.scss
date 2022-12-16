@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-.btnBlue {
+.btn {
         width: 100%;
         margin: auto;
         display: flex;
@@ -12,12 +12,19 @@
         font-family: 'Roboto', sans-serif;
         font-size: 15px;
         height: 35px;
-        background: #007AFF;
         border-radius: 6px;
         color: white;
         cursor: pointer;
+
+        &.btnPrimary{
+
+                background: #007AFF;
+
+                &:hover{
+                        background: blue;
+                }
+
+        }
+        
 }
 
-.btnBlue:hover{
-        background: blue;
-}

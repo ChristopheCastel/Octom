@@ -19,13 +19,13 @@
                     </a>
                 </div>
 
-                <app-button-blue nameBtn="Sign in"></app-button-blue>  
+                <app-button className="btnPrimary" nameBtn="Sign in" (clickEmitter)="actionEcouteur()"></app-button>  
             </form>
             
             <div id="ligneGrey"></div>
 
             <button type="submit" class="btnGoogle">
-                <img src="/assets/images/connexion/google-icon-logo.png" alt="logo google" width="15px" height="15px">
+                <img src="/assets/images/connexion/google-icon-logo.png" alt="logo google">
                 Or sign with Google
             </button>  
             
