@@ -18,6 +18,8 @@ import { LoginFormComponent } from './login/login-form/login-form.component';
 import { RegisterFormComponent } from './login/register-form/register-form.component';
 import { ForgotPasswordFormComponent } from './login/forgot-password-form/forgot-password-form.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +37,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ButtonComponent,
     LoginFormComponent,
     RegisterFormComponent,
-    ForgotPasswordFormComponent
+    ForgotPasswordFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

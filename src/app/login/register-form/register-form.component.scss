@@ -4,8 +4,9 @@ a {
 
 .title_nice{
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: center;
+    color: white;
 }
 
 .textEnd {
@@ -22,13 +23,117 @@ a {
 
 
     .textLeft{
-        color: #1A1A1A;
+        color: rgb(207, 206, 206);
 
     }
     .signInNow {
-        color: #007AFF;
+        color: #05A3FA;
+       
     }
     .signInNow:hover{
-        color: blue;
+        color: rgb(108, 108, 253);
     }
+}
+
+.formFrame{
+    box-sizing: border-box;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    
+    input, .selectphonePrefix{
+        box-sizing: border-box;
+        // background: #F2F2F2;
+        background-color: #131517;
+        border: 0.5px solid rgb(107, 106, 106);
+        border-radius: 6px;
+        padding: 5px;
+        font-size: 15x;
+        outline: none;
+        height: 40px;
+        color: grey;
+
+    &.customPhoneNumber{
+        width: 100%;
+    }
+    &:focus{
+        border-color: #77b0df;
+        // background-color: #1b1b1b;
+        background-color: rgb(214, 214, 213);
+        color: black;
+    }
+    &:hover{
+        border-color: #77b0df;
+    }
+    }
+    
+    .theSelect{
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }    
+}
+.add{
+    color: grey;
+}
+.remove{
+    color: grey;
+    text-align: right;
+}
+
+.form-label {
+        
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 12px;
+    color: grey;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.doubleInput{
+    display: flex;
+    justify-content: space-between;
+}
+.checkTerms{
+    display: flex;
+    align-items: center;
+    color: grey;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    gap: 5px;
+
+    .check-with-label:checked + label{
+        color: rgb(108, 108, 253);
+    }
+}
+
+.containerError{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 0.5em;
+
+    .errorLeft{
+        width: 50%;
+    }
+    .errorRight{
+        width: 50%;
+    }
+}
+    
+.error{
+    color: #c9110f;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-color: #c9110f;
 }

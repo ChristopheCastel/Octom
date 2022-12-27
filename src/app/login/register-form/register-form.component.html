@@ -1,6 +1,6 @@
-<p class="title_nice">Inscrivez-vous</p>
-            
-<form action="post" class="formFrame">
+<!-- Mon premier Formulaire avec composants inputs 
+    
+    <form action="post" class="formFrame">
 
     <app-input label="Email" type="email" id="email" name="email" placeholder="Email or phone number">
     </app-input>
@@ -12,9 +12,127 @@
     </app-input>
 
     <app-button className="btnPrimary" nameBtn="Sign up"></app-button>  
+</form> 
+
+ <div class="textEnd">
+    <p class="textLeft">Already an account ?</p>
+    <a  routerLink="/login" class="signInNow">Sign in now</a>
+</div>
+-->
+
+<form [formGroup]="registerForm" (ngSubmit)="submit()" class="formFrame">
+
+    <p class="title_nice">Please fill in this form to create an account.</p>
+
+    <div class="doubleInput">
+        <div class="inputs">
+            <label for="Lastname" class="form-label">Lastname</label>  
+            <input type="text" formControlName="lastname" placeholder="Enter your lastname">
+        </div>
+
+        
+        <div class="inputs">
+            <label for="Firstname" class="form-label">Firstname</label>  
+            <input type="text" formControlName="firstname" placeholder="Enter your firstname">
+        </div>
+    </div> 
+
+    <div class="containerError">
+        <div class="errorLeft">
+            <div class="error" *ngIf="lastname?.touched && lastname?.errors">
+                <span *ngIf="lastname?.errors!['required']">Champs requis</span>
+                <span *ngIf="lastname?.errors!['minlength']">Lastname must have at least 2 char.</span>
+                <span *ngIf="lastname?.errors!['maxlength']">Lastname must have at most 20 char.</span>
+            </div>
+        </div>
+        <div class="errorRight">
+            <div class="error" *ngIf="firstname?.touched && firstname?.errors">
+                <span *ngIf="firstname?.errors!['required']">Champs requis</span>
+                <span *ngIf="firstname?.errors!['minlength']">Lastname must have at least 2 char.</span>
+                <span *ngIf="firstname?.errors!['maxlength']">Lastname must have at most 20 char.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="inputs" formArrayName="phones">
+
+       
+        <div *ngFor="let phone of phones.controls; let i=index; let first=first" [formGroupName]="i" class>
+            <label for="email" class="form-label">Phone Number</label>  
+            <div class="theSelect">
+                <select class="selectphonePrefix" name="phonePrefix" formControlName="phonePrefix" required>
+                <option selected value="+33">+33</option>
+                <option value="+98">+98</option>
+                <option value="+98">+99</option>
+                <option value="+98">+90</option>
+                <option value="+66">+66</option>
+                </select>
+                <input class="customPhoneNumber"type="phone" name="phone" formControlName="phoneNumber" placeholder=" example 625273578">
+            </div>    
+            <div (click)="deletePhone(i)" *ngIf="!first" class="remove">- Remove</div>
+            <div class="error" *ngIf="getPhoneNumber(i)?.touched && getPhoneNumber(i)?.errors">
+                Invalid Phone Number
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Error de mon seul input Phone number --------------------
+        <div class="error" *ngIf="phone?.touched && phone?.errors">
+            Invalid Phone Number
+         </div> 
+    -->
+    <div (click)="addPhone()" class="add">+ Add Phone number</div>
+    <span class="error" *ngIf="phones?.length == 3">You can add up to 3 number max</span>
+
+    <div class="inputs">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" placeholder="Enter your email" name="email" formControlName="email">
+    </div>
+
+    <div class="error" *ngIf="email?.touched && email?.errors">
+       Invalid E-mail Address  
+    </div>
+
+
+    <div class="doubleInput">
+        <div class="inputs">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" placeholder="Enter your password" formControlName="password">
+        </div>
+
+        <div class="inputs">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="confirmPassword" placeholder="Confirm your password" formControlName="confirmPassword">
+        </div>
+    </div>
+
+    <div class="containerError">
+        <div class="errorLeft">
+            <div class="error" *ngIf="(password?.touched && password?.errors)">
+            Password must be at least 8 char includes min 1 uppercase, 1 lowercase, 1 special char.
+            </div>
+        </div>
+        <div class="errorRight">
+            <div class="error" *ngIf="(confirmPassword?.touched && confirmPassword?.errors)">
+            Confirm Password must be the same that password.
+            </div>
+        </div>
+    </div>
+
+    <div class="checkTerms">
+        <input type="checkbox" id="terms" class="check-with-label" formControlName="terms">
+        <label for="terms">By creating an account you agree to our Terms & Privacy</label>
+    </div>
+    <div class="error" *ngIf="terms?.touched && terms?.errors">
+    You must agree to the terms in order to register
+    </div>
+    
+    <app-button className="btnPrimary">Sign in</app-button>  
+    
 </form>
 
 <div class="textEnd">
     <p class="textLeft">Already an account ?</p>
     <a  routerLink="/login" class="signInNow">Sign in now</a>
-</div>
+</div> 
