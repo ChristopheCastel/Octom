@@ -1,6 +1,8 @@
 <div class="inputs">
     <label for="name" class="form-label">{{label}}</label>
-    <input [type]="type" [id]="id" [name]="name" [placeholder]="placeholder">
+    <input [type]="type" [id]="id" [name]="name" [placeholder]="placeholder" >
+    <!-- [formControlName]="formControlName" -->
+    <ng-content></ng-content>
 </div>
 
 <!-- #inputValue (change) ="emitEmail(inputEmail.value)"> -->

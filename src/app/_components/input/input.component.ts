@@ -11,6 +11,7 @@ export class InputComponent {
   @Input() id:string = "";
   @Input() name:string = "";
   @Input() placeholder:string = "";
+  // @Input() formControlName:string = "";
 
   @Output() inputEmail: EventEmitter<String> = new EventEmitter<String>();
 

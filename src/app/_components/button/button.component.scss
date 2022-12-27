@@ -15,13 +15,13 @@
         border-radius: 6px;
         color: white;
         cursor: pointer;
+        margin-top: 20px;
 
         &.btnPrimary{
-
-                background: #007AFF;
+                background:#1DA7FF;
 
                 &:hover{
-                        background: blue;
+                        background: #5051F9;
                 }
 
         }

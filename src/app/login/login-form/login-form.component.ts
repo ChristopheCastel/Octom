@@ -9,9 +9,11 @@ import { EmailValidator } from '@angular/forms';
 })
 export class LoginFormComponent {
 
+
 actionEcouteur(){
+
   alert('Connexion réussie');
- 
+
 }
   // validateEmail(email: EmailValidator) {
   //   console.log(email) 
